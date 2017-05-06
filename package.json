@@ -1,0 +1,13 @@
+{
+  "name": "aporrea-crawler",
+  "version": "0.0.1",
+  "description": "Crawl and scrape aporrea",
+  "main": "server.js",
+  "author": "djbb7",
+  "dependencies": {
+    "cheerio": "latest",
+    "express": "latest",
+    "request": "latest",
+    "request-promise": "^4.2.0"
+  }
+}
