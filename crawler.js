@@ -85,10 +85,11 @@ router.get('/article', function(req,res){
 			var id = req.query.url.slice(req.query.url.indexOf('/')+1, req.query.url.indexOf('.html'))
 			var author = $('[itemprop="author"]').text();
 			var title = $('[itemprop="name"]').text();
-			var datePublished = $('[itemprop="datePublished"]').text();
+			var date = $('[itemprop="datePublished"]').text();
 			var readCount = $('h3 span.badge.badge-info').text();
 			var content = $('div[itemprop="articleBody"]').html();
-
+			var datePublished = date.slice(date.indexOf(',')+1).trim() + ' -04:00'
+			
 			var article = {
 				'id' : id,
 				'title' : title,
