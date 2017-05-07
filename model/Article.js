@@ -10,7 +10,8 @@ var Schema = new mongoose.Schema({
 	content: String,
 	datePublished: Date,
 	readCount: Number,
-	crawlUrl: String
+	crawlUrl: String,
+    crawled: { type: Boolean, default: false}
 })
 
 var Article = mongoose.model('Article', Schema)
