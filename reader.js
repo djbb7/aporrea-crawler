@@ -47,10 +47,6 @@ router.get('/articles/:year/:month/:day', function(req, res){
     Article
         .find({ datePublished: {"$gte": start, "$lt": end}, crawled: true }, '-_id')
         .then(function(articles){
-            if(articles.length == 0){
-                res.sendStatus(404)
-                return
-            }
             res.setHeader('Content-Type', 'application/json')
 			res.send(JSON.stringify(articles))
         })
