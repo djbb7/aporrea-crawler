@@ -24,6 +24,6 @@ app.use('/api', reader)
 
 app.listen(port);
 
-console.log('Magic happens on port' + port);
+console.log('Magic happens on port ' + port);
 
 exports = module.exports = app;
