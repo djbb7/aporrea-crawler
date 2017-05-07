@@ -141,7 +141,7 @@ router.get('/archive/:year/:month/:day', function(req, res){
 					'title'	: title,
 					'avatar' : avatar,
 					'id' : id,
-					'crawlUrl' : '/article?url='+url
+					'crawlUrl' : server+'/article?url='+url
 				}
 			})
 
